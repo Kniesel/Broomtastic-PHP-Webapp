@@ -1,0 +1,5 @@
+
+CREATE TABLE IF NOT EXISTS `users` (
+	pk_username VARCHAR(52) PRIMARY KEY,
+	userpassword VARCHAR(52) NOT NULL
+);

@@ -45,7 +45,7 @@
 					<br>
 
 					<p class="title2">Category</p>
-					<form action="../business/business.php" method="post" class="filtercontent"> 
+					<form action="../business/products.php" method="post" class="filtercontent" name="tabledata"> 
 						<select name="category">
 							<option>Show all categories</option> 
 							<option>Balls</option> 
@@ -70,17 +70,6 @@
 					# suchfeld ... brauchen wir des? XD haben wir so viele produkte überhaupt? haha
 				</p>
 				<br>
-				<a href="../business/products.php">Categories-Linktest<br>
-								<?php
-					$handle = fopen ("../business/products.php", "r");
-					while (!feof($handle)) {
-						$buffer = fgets($handle);
-						echo $buffer;
-						echo "<br />";
-					}
-					fclose ($handle);
-					?></a>
-
 				<table>
 
 					<tr>

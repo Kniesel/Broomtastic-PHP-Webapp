@@ -19,6 +19,7 @@ The aim of our web-app is very simple: We provide an online webshop for Quidditc
 
 #ToDo
 
+- keine doppelten einträge erlauben
 - nicht erlauben, dass user sich ohne password einzugeben registriert (hab bei der table sogar not null extra dazugemacht und es geht td noch)
 - weiß noch ned wie des dann mit login ist und habs jz nur mal mit registrieren probiert wo ja a neuer eintrag angelegt wird
 - table mit produkten ... ich weiß ehrlich ned, wie wir des filtern =/ weil ma ja fast auch bilder filtern dann irgw - überfooordert

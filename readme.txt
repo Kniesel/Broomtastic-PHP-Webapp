@@ -21,6 +21,7 @@ __________________________
 TODO
 __________________________
 
+# keine doppelten einträge erlauben
 # nicht erlauben, dass user sich ohne password einzugeben registriert (hab bei der table sogar not null extra dazugemacht und es geht td noch -_-)
 # weiß noch ned wie des dann mit login ist und habs jz nur mal mit registrieren probiert wo ja a neuer eintrag angelegt wird
 # table mit produkten ... ich weiß ehrlich ned, wie wir des filtern =/ weil ma ja fast auch bilder filtern dann irgw - überfooordert

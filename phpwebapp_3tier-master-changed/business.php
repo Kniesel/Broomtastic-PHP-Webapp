@@ -15,8 +15,8 @@ class User {
 		$data = $this->userDAO->readAll();
 		return $data;
 	}
-	public function createUser($pk_username, $userpassword) {
-		$data = $this->userDAO->create($pk_username, $userpassword);
+	public function createUser($pk_username) {
+		$data = $this->userDAO->create($pk_username);
 		return $data;
 	}
 

@@ -20,15 +20,9 @@ class UserDAO {
 	/*
 	 * Create a new User with pk_username
 	 */
-	public function create($pk_username, $userpassword) {
-		echo $pk_username;
-		echo $userpassword;
-		echo "Katze";
-		$stmt = $this->connection->prepare( "INSERT INTO users (pk_username, userpassword) VALUES (?, ?);" );
-		echo "Hund";
+	public function create($pk_username) {
+		$stmt = $this->connection->prepare( "INSERT INTO users (pk_username) VALUES (?);" );
 		$stmt->bind_param( 's', $pk_username );
-		echo "Esel";
-		$stmt->bind_param( 's', $userpassword );
 		if ($stmt->execute()) {
 			echo "Insert complete";
 			return 1;
@@ -58,7 +52,7 @@ class UserDAO {
 	}
 	
 	/*
-	 * Get all Users in the Database
+	 * Get all Cities in the Database
 	 */
 	public function readAll() {
 		$select = "SELECT * FROM users;";
@@ -82,7 +76,7 @@ class UserDAO {
 	/*
 	 * Update the informations of a User, identified by its name.
 	 */
-	public function update($pk_username, $userpassword ) {
+	public function update($pk_username) {
 		$stmt = $this->connection->prepare ( "UPDATE users SET pk_username=? WHERE pk_username = ?;" );
 		$stmt->bind_param ( 'ss', $pk_username, $pk_username );
 		

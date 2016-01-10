@@ -23,5 +23,4 @@ The aim of our web-app is very simple: We provide an online webshop for Quidditc
 - nicht erlauben, dass user sich ohne password einzugeben registriert (hab bei der table sogar not null extra dazugemacht und es geht td noch)
 - weiß noch ned wie des dann mit login ist und habs jz nur mal mit registrieren probiert wo ja a neuer eintrag angelegt wird
 - table mit produkten ... ich weiß ehrlich ned, wie wir des filtern =/ weil ma ja fast auch bilder filtern dann irgw - überfooordert
-- sollen wir des aufs git tun zum dran arbeiten? da steht irgendwas in der angabe ... und wir brauchen noch eine lösung wie wir beide zugriff haben, weil des läuft ja über des fh-ding und i muss es bei mir auch immer beim winscp rauftun, damits geht, wodurch du des fast mit deiner fh-datenbank immer machen müsstest
 - suchfeld ... brauchen wir des? XD haben wir so viele produkte überhaupt? haha

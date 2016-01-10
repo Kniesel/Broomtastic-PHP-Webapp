@@ -60,6 +60,7 @@
 			<section>
 				<h1>Welcome to the Broomtastic-Webshop!</h1>
 				<br>
+				<div><?php include '../business/products.php'; ?></div>
 				<p>Blablablubberfasel - Die HP schrift is nervig, de geht ned =/<br>
 					TODO:<br>
 					# keine doppelten einträge erlauben<br>

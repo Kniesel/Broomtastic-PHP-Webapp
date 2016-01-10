@@ -20,9 +20,30 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+//check if no data in string - does not work like it should...
+// wenn ma nämlich jz a passwort eingibt, wird des zu 0 
+//und wenn ma keins eingibt, wirds zu NULL in der tabelle - sprich, es geht immer noch rein -.-
+if ($userpassword == "") {
+	$userpassword = "NULL";
+}else{
+	$userpassword = "'" + $userpassword + "'";
+}
+
 $sql = 
 "INSERT INTO users (pk_username, userpassword)
 VALUES ('$pk_username', '$userpassword')";
+
+//tests vo mir
+// "INSERT INTO users (pk_username, userpassword)
+// VALUES ('$pk_username', '" + $userpassword + "')";
+
+// "INSERT INTO users(" +
+// 	"pk_username," +
+// 	"userpassword" +
+// 	") VALUES (" + 
+// 		"'$pk_username'" + "," +
+// 		mysql_real_escape_string($userpassword) + 
+// 		")";
 
 
 if ($conn->query($sql) === TRUE) {

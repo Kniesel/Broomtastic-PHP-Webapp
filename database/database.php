@@ -114,10 +114,9 @@ class UserDAO {
 		$stmt = $this->connection->prepare( "INSERT INTO users (pk_username) VALUES (?);" );
 		$stmt->bind_param( 's', $pk_username );
 		if ($stmt->execute()) {
-			echo "Insert complete";
+			//echo "Insert complete";
 			return 1;
 		} else {
-			echo "User-Create-ERROR: " . $insert . "<br>" . mysqli_error ( $this->connection );
 			return - 1;
 		}
 	}
@@ -171,10 +170,10 @@ class UserDAO {
 		$stmt->bind_param ( 'ss', $pk_username, $pk_username );
 		
 		if ($stmt->execute ()) {
-			echo "Update complete";
+			//echo "Update complete";
 			return 1;
 		} else {
-			echo "User-Update-ERROR: " . $stmt . "<br>" . mysqli_error ( $this->connection );
+			//echo "User-Update-ERROR: " . $stmt . "<br>" . mysqli_error ( $this->connection );
 			return -1;
 		}
 	}

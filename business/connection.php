@@ -2,13 +2,13 @@
 class DB{
 	
 	// Hannah
-	// private $servername = "127.0.0.1:8889";
+	// private $servername = "127.0.0.1";
 	// private $username = "kirchmai14";
 	// private $password = " ";
 	// private $dbname = "kirchmai14";
 
 	// Anja
-	private $servername = "127.0.0.1:8889";
+	private $servername = "127.0.0.1";
 	private $username = "bergmann14";
 	private $password = "2seDmOu9";
 	private $dbname = "bergmann14";

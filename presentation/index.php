@@ -70,6 +70,17 @@
 					# suchfeld ... brauchen wir des? XD haben wir so viele produkte überhaupt? haha
 				</p>
 				<br>
+				<a href="../business/products.php">Categories-Linktest<br>
+								<?php
+					$handle = fopen ("../business/products.php", "r");
+					while (!feof($handle)) {
+						$buffer = fgets($handle);
+						echo $buffer;
+						echo "<br />";
+					}
+					fclose ($handle);
+					?></a>
+
 				<table>
 
 					<tr>

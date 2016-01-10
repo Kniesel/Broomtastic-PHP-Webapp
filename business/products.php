@@ -6,8 +6,21 @@ include("business.php");
 // init User Model from Business Logic
 $product = new Product();
 
-// load all products
-$data = $product->getAll();
+$category = $_POST["category"]; 
+
+// call category if post data exists
+if(isset($category){
+//call all categories
+  if($category == "Show all categories"){
+    //echo "You entered all categories \n <br>";
+    $data = $product->readAll();
+  }
+//call special category
+  else{
+    //echo "You entered category: " . $category . "\n <br>";
+    $data = $product->readByCategory($category);
+  }
+}
 
 // prepare HTML Table
 function getHTMLTable($tabledata) {

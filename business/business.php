@@ -13,12 +13,12 @@ class Product {
 	public function __construct() {
 		$this->productDAO = new ProductDAO();
 	}
-	public function getAll() {
+	public function readAll() {
 		$data = $this->productDAO->readAll();
 		return $data;
 	}
 	public function readByCategory($category) {
-		$data = $this->productDAO->read($category);
+		$data = $this->productDAO->readByCategory($category);
 		return $data;
 	}
 

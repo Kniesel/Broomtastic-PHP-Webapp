@@ -44,20 +44,25 @@ class ProductDAO {
 	 * Get all Products from a specific category
 	 */
 	public function readByCategory($category) {
-		$stmt = $this->connection->prepare( "SELECT * FROM products WHERE category = ?;" );
-		$stmt->bind_param( 's', $category );
-		
-		if ($stmt->execute ()) {
-			$stmt->bind_result( $category);
-			while ( $stmt->fetch() ) {
-				$row['category'] = $category;
-			}
-			return $row;
-		} else {
-			echo "0 results";
-			return - 1;
-		}
-	}
+
+		 $select = "SELECT * FROM products WHERE category = \"?\";";
+		  if ($this->connection == null) {
+		   echo "Connection not initialized!";
+		  } else if ($result = mysqli_query ( $this->connection, $select )) {
+		   $items = null;
+		   if (mysqli_num_rows ( $result ) > 0) {
+		    while ( $row = mysqli_fetch_assoc ( $result ) ) {
+		     $items [] = $row;
+		    }
+		    return $items;
+		   } else {
+		    echo "</br>0 results";
+		   }
+		  } else {
+		   echo "Resultset leer/nicht definiert!";
+		  }
+		 }
+
 
 
 //------------------------------------------------------
@@ -82,7 +87,8 @@ class ProductDAO {
 			} else {
 				echo "</br>0 results";
 			}
-		} else {
+		} 
+		else {
 			echo "Resultset leer/nicht definiert!";
 		}
 	}

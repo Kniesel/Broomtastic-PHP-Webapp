@@ -30,10 +30,10 @@ function getHTMLTable($tabledata) {
 
   foreach($tabledata as $product) {
     $html .= '<tbody><tr>';
-    $html .= '<td>' . $user['productname'] . '</td>';
-    $html .= '<td>' . $user['category'] . '</td>';
-    $html .= '<td>' . $user['price'] . '</td>';
-    $html .= '<td>' . $user['description'] . '</td>';
+    $html .= '<td>' . $product['productname'] . '</td>';
+    $html .= '<td>' . $product['category'] . '</td>';
+    $html .= '<td>' . $product['price'] . '</td>';
+    $html .= '<td>' . $product['description'] . '</td>';
     $html .= '</tr></tbody>';
   }
 

@@ -5,11 +5,17 @@
 // now include database layer
 include("../database/database.php");
 
-$categories = $_POST["categories"]; 
-echo "You entered all categories \n <br>";
 
 $category = $_POST["category"]; 
-echo "You entered category: " . $category . "\n <br>";
+
+
+if ($category == "Show all categories") {
+	//function getAll() aufrufen ??;
+	echo "You entered all categories \n <br>";
+}else{
+	// function readby category aufrufen?
+	echo "You entered category: " . $category . "\n <br>";
+}
 
 // Product Model
 class Product {
@@ -18,7 +24,7 @@ class Product {
 	public function __construct() {
 		$this->productDAO = new ProductDAO();
 	}
-	public function getAll($categories) {
+	public function getAll() {
 		$data = $this->productDAO->readAll();
 		return $data;
 	}

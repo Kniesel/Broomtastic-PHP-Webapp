@@ -19,23 +19,23 @@ class ProductDAO {
 	
 	
 	/*
-	 * Get all informations of a Product by its name
+	 * Get product by id
 	 */
-	public function read($pk_username) {
-		$stmt = $this->connection->prepare( "SELECT * FROM users WHERE pk_username = ?;" );
-		$stmt->bind_param( 's', $pk_username );
+	// public function read($pk_username) {
+	// 	$stmt = $this->connection->prepare( "SELECT * FROM products WHERE id = ?;" );
+	// 	$stmt->bind_param( 's', $pk_username );
 		
-		if ($stmt->execute ()) {
-			$stmt->bind_result( $pk_username);
-			while ( $stmt->fetch() ) {
-				$row['pk_username'] = $pk_username;
-			}
-			return $row;
-		} else {
-			echo "0 results";
-			return - 1;
-		}
-	}
+	// 	if ($stmt->execute ()) {
+	// 		$stmt->bind_result( $pk_username);
+	// 		while ( $stmt->fetch() ) {
+	// 			$row['pk_username'] = $pk_username;
+	// 		}
+	// 		return $row;
+	// 	} else {
+	// 		echo "0 results";
+	// 		return - 1;
+	// 	}
+	// }
 
 //------------------------------------------------------
 //TEST
@@ -43,14 +43,14 @@ class ProductDAO {
 	/*
 	 * Get all Products from a specific category
 	 */
-	public function read($pk_username) {
-		$stmt = $this->connection->prepare( "SELECT * FROM users WHERE pk_username = ?;" );
-		$stmt->bind_param( 's', $pk_username );
+	public function readByCategory($category) {
+		$stmt = $this->connection->prepare( "SELECT * FROM products WHERE category = ?;" );
+		$stmt->bind_param( 's', $category );
 		
 		if ($stmt->execute ()) {
-			$stmt->bind_result( $pk_username);
+			$stmt->bind_result( $category);
 			while ( $stmt->fetch() ) {
-				$row['pk_username'] = $pk_username;
+				$row['category'] = $category;
 			}
 			return $row;
 		} else {
@@ -66,10 +66,10 @@ class ProductDAO {
 
 	
 	/*
-	 * Get all Cities in the Database
+	 * Get all Products in the Database
 	 */
 	public function readAll() {
-		$select = "SELECT * FROM users;";
+		$select = "SELECT * FROM products;";
 		if ($this->connection == null) {
 			echo "Connection not initialized!";
 		} else if ($result = mysqli_query ( $this->connection, $select )) {

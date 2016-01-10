@@ -46,7 +46,7 @@ function getHTMLTable($tabledata) {
 ?>
 <html>
  <head> 
-   <title>Broomtastic</title>
+   <title>Broomtastic: Products</title>
  </head>
  <body>
  

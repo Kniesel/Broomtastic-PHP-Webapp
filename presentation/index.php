@@ -16,10 +16,13 @@
 					<div class="dropdown">
 						<button class="dropbutton">Sign in</button>
 						<div class="dropdown-content">
-							<a class="inputforms" href="#">Username</a>
-							<a class="inputforms" href="#">Password</a>
-							<a class="inputforms" href="#">Login</a>
-							<a class="inputforms" href="#">Register</a>
+							<form action="../business/users.php" method="post">
+								<p>Username</p>
+								<input class="inputforms" type="text" name="pk_username" value="Your username">
+								<a class="inputforms" href="#">Password</a>
+								<a class="inputforms" href="#">Login</a>
+								<input class="inputforms" type="submit" value="Register">
+							</form>
 						</div>
 					</div>
 					<img id="owl" src="./img/owl.jpg" alt="Shopping Owl"/>

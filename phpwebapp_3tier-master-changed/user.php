@@ -8,7 +8,7 @@ $user = new User();
 
 // insert new user if post data exists
 if(isset($_POST["pk_username"]) && $_POST["pk_username"]){
-	$user->createUser($_POST["pk_username"]);
+	$user->createUser($_POST["pk_username"], $_POST["userpassword"]);
 }
 
 // now load all users
@@ -36,15 +36,20 @@ function getHTMLTable($tabledata) {
 ?>
 <html>
  <head> 
-   <title>Städte</title>
+   <title>Users</title>
  </head>
  <body>
  
  <form method="post" >
-   neuer User: <input type="text" name="pk_username" />
-	<input type="submit" value="Submit"/>
- </form>
- 
+    <h2> Register: </h2> <br>
+    Username: <br>
+    <input type="text" name="pk_username" /><br>
+    Password: <br>
+    <input type="text" name="userpassword" /> <br>
+    <input type="submit" value="Submit" />
+  </form>
+
+    
  <?php echo getHTMLTable($data); ?><br />
  
  </body>

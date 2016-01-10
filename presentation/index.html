@@ -45,13 +45,15 @@
 					<br>
 
 					<p class="title2">Category</p>
-					<form action="#" class="filtercontent"> 
+					<form action="../business/business.php" method="post" class="filtercontent"> 
 						<select name="category">
-							<option>Show all categories</option> 
-							<option>Balls</option> 
-							<option>Brooms</option> 
-							<option>Clothing</option> 
+							<option name="allCategories">Show all categories</option> 
+							<option name="balls">Balls</option> 
+							<option name="books">Books</option> 
+							<option name="brooms">Brooms</option> 
+							<option name="clothing">Clothing</option> 
 						</select>
+						<input type="submit" value="OK" class="filtercontent">
 					</form> 
 			</aside>
 			

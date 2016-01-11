@@ -15,9 +15,9 @@ class DB{
 	
 	public function __construct() {}
 	public function connect() {
-        	$mysqli = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+			$mysqli = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 		if($mysqli->connect_error)
-    			die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
+				die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 		return $mysqli;
-    	}
+		}
 }

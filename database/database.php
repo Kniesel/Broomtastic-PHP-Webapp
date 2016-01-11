@@ -1,9 +1,9 @@
 <?php
 // include database connection only once,
 // it could be possible that the connection will be loaded at another DAO
-include_once "../business/connection.php";
+include_once "./business/connection.php";
 
-// Database Layer for Product
+// DATABASE-LAYER FOR PRODUCT -------------------------------------------------------------------
 class ProductDAO {
 	private $connection = null;
 	
@@ -17,31 +17,10 @@ class ProductDAO {
 		}
 	}
 	
-	
-	/*
-	 * Get product by id
-	 */
-	// public function read($pk_username) {
-	// 	$stmt = $this->connection->prepare( "SELECT * FROM products WHERE id = ?;" );
-	// 	$stmt->bind_param( 's', $pk_username );
-		
-	// 	if ($stmt->execute ()) {
-	// 		$stmt->bind_result( $pk_username);
-	// 		while ( $stmt->fetch() ) {
-	// 			$row['pk_username'] = $pk_username;
-	// 		}
-	// 		return $row;
-	// 	} else {
-	// 		echo "0 results";
-	// 		return - 1;
-	// 	}
-	// }
 
-//------------------------------------------------------
-//TEST
 
 	/*
-	 * Get all Products from a specific category
+	 * Get all products from a specific category
 	 */
 	public function readByCategory($category) {
 
@@ -55,17 +34,12 @@ class ProductDAO {
 			}
 			return $item;
 		}
-}
+	}
 
 
 
-//------------------------------------------------------
-
-
-
-	
 	/*
-	 * Get all Products in the Database
+	 * Get all products in the database
 	 */
 	public function readAll() {
 		$select = "SELECT * FROM products;";
@@ -79,11 +53,11 @@ class ProductDAO {
 				}
 				return $items;
 			} else {
-				echo "</br>0 results";
+				//echo "</br>0 results";
 			}
 		} 
 		else {
-			echo "Resultset leer/nicht definiert!";
+			//echo "Resultset leer/nicht definiert!";
 		}
 	}
 	
@@ -91,9 +65,7 @@ class ProductDAO {
 
 
 
-
-
-// Database Layer for User-------------------------------------------------------------------
+// DATABASE-LAYER FOR USER -------------------------------------------------------------------
 class UserDAO {
 	private $connection = null;
 	
@@ -108,7 +80,7 @@ class UserDAO {
 	}
 	
 	/*
-	 * Create a new User with pk_username
+	 * Create a new user with pk_username
 	 */
 	public function create($pk_username) {
 		$stmt = $this->connection->prepare( "INSERT INTO users (pk_username) VALUES (?);" );
@@ -122,7 +94,7 @@ class UserDAO {
 	}
 	
 	/*
-	 * Get all informations of a User by its name
+	 * Get all information of a user by its name
 	 */
 	public function read($pk_username) {
 		$stmt = $this->connection->prepare( "SELECT * FROM users WHERE pk_username = ?;" );
@@ -135,13 +107,13 @@ class UserDAO {
 			}
 			return $row;
 		} else {
-			echo "0 results";
+			//echo "0 results";
 			return - 1;
 		}
 	}
 	
 	/*
-	 * Get all Cities in the Database
+	 * Get all users in the database
 	 */
 	public function readAll() {
 		$select = "SELECT * FROM users;";
@@ -155,15 +127,15 @@ class UserDAO {
 				}
 				return $items;
 			} else {
-				echo "</br>0 results";
+				//echo "</br>0 results";
 			}
 		} else {
-			echo "Resultset leer/nicht definiert!";
+			//echo "Resultset leer/nicht definiert!";
 		}
 	}
 
 	/*
-	 * Update the informations of a User, identified by its name.
+	 * Update the information of a user, identified by its name. // is not used
 	 */
 	public function update($pk_username) {
 		$stmt = $this->connection->prepare ( "UPDATE users SET pk_username=? WHERE pk_username = ?;" );

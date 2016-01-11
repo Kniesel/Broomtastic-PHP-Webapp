@@ -3,7 +3,7 @@
 // Business Layer
 
 // now include database layer
-include("../database/database.php");
+include("./database/database.php");
 
 
 // Product Model

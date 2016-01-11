@@ -1,5 +1,0 @@
-
-> Die Text-input-Forms ausm html nehmen
-> Funktionen bei den Drop-Down-Listen einfügen
-	--> Aus der Datenbank nur die entsprechenden Sachen holen und anzeigen 
-> database.php aus phpwebapp_3tier-master klauen

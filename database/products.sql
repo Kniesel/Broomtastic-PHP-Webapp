@@ -1,4 +1,9 @@
-DROP TABLE IF EXISTS products;
+/*drop tables to ensure that there are no other tables with the same name but different columns
+ don't do this with a real database!*/
+DROP TABLE IF EXISTS products; 
+DROP TABLE IF EXISTS users; 
+
+-- ------------------------------------------------------------------------
 
 CREATE TABLE products (
 	pk_productid SERIAL PRIMARY KEY,
@@ -27,3 +32,17 @@ INSERT INTO products (productname, category, price) VALUES ("Broomtastic Kids", 
 INSERT INTO products (productname, category, price) VALUES ("Broomtastic Senior", "Brooms", 900);
 INSERT INTO products (productname, category, price) VALUES ("Broomtastic Traveller", "Brooms", 1400);
 
+-- ------------------------------------------------------------------------
+
+CREATE TABLE users (
+	pk_username VARCHAR(55) PRIMARY KEY
+);
+
+
+INSERT INTO users (pk_username) VALUES ("Fresh D");
+INSERT INTO users (pk_username) VALUES ("Doctor");
+INSERT INTO users (pk_username) VALUES ("Harry Potter");
+INSERT INTO users (pk_username) VALUES ("Neville Longbottom");
+INSERT INTO users (pk_username) VALUES ("Gwenog Jones");
+INSERT INTO users (pk_username) VALUES ("Amy Jones");
+INSERT INTO users (pk_username) VALUES ("Sheld0r");

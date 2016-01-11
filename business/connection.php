@@ -2,14 +2,14 @@
 class DB{
 	
 	// Hannah
-	private $servername = "127.0.0.1";
-	private $username = "kirchmai14";
-	private $password = "9cIb3tdL";
-	private $dbname = "kirchmai14";
+	// private $servername = "127.0.0.1";
+	// private $username = "kirchmai14";
+	// private $password = "passwort einzeln eingefügt";
+	// private $dbname = "kirchmai14";
 	// Anja
 	// private $servername = "127.0.0.1";
 	// private $username = "bergmann14";
-	// private $password = "2seDmOu9";
+	// private $password = "passwort einzeln eingefügt";
 	// private $dbname = "bergmann14";
 	
 	

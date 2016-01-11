@@ -149,6 +149,22 @@ class UserDAO {
 			return -1;
 		}
 	}
+
+	/*
+	* Delete a user from database //is not used
+	*/
+	public function delete($pk_username){
+		$stmt = $this->connection->prepare("DELETE FROM users WHERE pk_username?;");
+		$stmt->bind_param ('s', $pk_username);
+
+		if ($stmt->execute()){
+			return 1;
+		} else {
+			//echo "User-Delete-ERROR:" . $stmt . "<br>" . mysqli_error ($this->connection);
+			return -1;
+		}
+
+	}
 	
 }
 

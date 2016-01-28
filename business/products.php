@@ -1,5 +1,5 @@
 <?php
-// we now in presentation layer
+// we are now in presentation layer
 // we will include business layer to load business logic
 include("./business/business.php");
 
@@ -45,7 +45,7 @@ function getHTMLTable($tabledata) {
 	return $html;
 }
 
-// now we can output the requested data
+
 ?>
 
 

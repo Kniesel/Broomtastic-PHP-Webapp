@@ -1,5 +1,5 @@
 <?php
-// we now in presentation layer
+// we are now in presentation layer
 // we will include business layer to load business logic
 include("./business/business.php");
 
